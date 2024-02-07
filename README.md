@@ -38,9 +38,9 @@ Note, the functionality provides an example of web storage in the local sense. H
 
 ## Collection Page
 
-Following the side panel navigation, we are brought to the Collection page. The collection page should be seen as one of the website's most important features. It displays all of the listing regarding my collection of favorite programming languages.
+Following the side panel navigation, we are brought to the Collection page. The collection page should be seen as one of the website's most important features. It displays all of the listings regarding my collection of favorite programming languages.
 
-One feature that is prominent on this page is the favorite feature. Favoriting allows users to essentially bookmark listings for later review. This means that refreshing the page will cause favorited listing to remain checked.
+One feature that is prominent on this page is the favorite feature. Favoriting allows users to essentially bookmark listings for later review. This means that refreshing the page will cause favorited listings to remain checked.
 
 Once a user has selected any websites that they would like to favorite, they can then move onto the product page. This is done by selecting a desired listing.
 
@@ -48,11 +48,11 @@ Once a user has selected any websites that they would like to favorite, they can
 
 ## Product Page
 
-After the user has chosen a listing, they will be redirected to this product page. For each listing, a different product page will be presented. On the page, the icon and description will change depending on the selected listing. This is accomplished by a JavaScript handler script that will note the name of the selected listing. When the user selects a listing, this handler script will initially cancel the redirect. This is done to present to data on the upcoming page. 
+After the user has chosen a listing, they will be redirected to this product page. For each listing, a different product page will be presented. On the page, the icon and description will change depending on the selected listing. This is accomplished by a JavaScript handler script that will note the name of the selected listing. When the user selects a listing, this handler script will initially cancel the redirect. This is done to present data on the upcoming page. 
 
-Within the script is a small database that corresponds to each listing. Each database object contains data relating to the language name, icon reference, and description. Therefore, the script will grab the redirect request and apply to applicable data to the product page. Once this is finished, it will redirect the user to the updated page.
+Within the script is a small database that corresponds to each listing. Each database object contains data relating to the language name, icon reference, and description. Therefore, the script will grab the redirect request and apply the applicable data to the product page. Once this is finished, it will redirect the user to the updated page.
 
-One thing to note about this approach is that the product page will not stand on its own. It needs the script called before the redirect to fill it with information. To prevent prevent leaving the user on an empty page after a refresh, additional JavaScript is added. It will perform a check whenever a page is loaded. If the page is the product page and contains no information, the website will redirect back to the collection page. Ultimately, this allows the data to be accurately loaded without unexpected behavior.
+One thing to note about this approach is that the product page will not stand on its own. It needs the script to be called before the redirect to fill it with information. To prevent leaving the user on an empty page after a refresh, additional JavaScript is added. It will perform a check whenever a page is loaded. If the page is the product page and contains no information, the website will redirect back to the collection page. Ultimately, this allows the data to be accurately loaded without unexpected behavior.
 
 
 
