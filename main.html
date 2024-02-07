@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Programming Language Collection</title>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"></meta>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"></link>
+    <link rel="stylesheet" href="themes/dark-purple.css"></link>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"></link>
+    <link rel="stylesheet" href="css/custom.css"></link>
+    <!--JavaScript-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+
+    <!--Main Page-->
+    <div id="home" data-role="page" data-theme="a">
+
+      <!--Main Header-->
+      <div class="header" data-role="header">
+        <a href="#nav-panel" data-icon="bars" class="panel-button">Open</a> 
+        <h1>Programming Language Collection</h1>  
+        <img class="ui-btn-right" style="height: 40px;" src="icons/logo.png"></img>
+      </div>
+
+      <!--Panel-->
+      <div id="nav-panel" data-role="panel" data-display="overlay">
+        <div data-role="navbar"><a href="#collection">Collection</a></div>   
+        <div data-role="navbar"><a href="#contact">Contact</a></div>   
+      </div>
+
+      <!--Content-->
+      <div class="content center-children" data-role="content">   
+        <div class="ui-body ui-body-a ui-corner-all">          
+          <div id="main-icons" class="ui-grid-c center-children">
+            <img class="ui-block-a" src="icons/Hypertext Markup Language.png"></img>
+            <img class="ui-block-b" src="icons/Cascading Style Sheets.png"></img>
+            <img class="ui-block-c" src="icons/JavaScript.png"></img>
+          </div>
+          <p><br/><br/>Welcome to my collection! <br/><br/>This website is designed to provide information on a variety of programming languages and give a basic overview of where they are often used in today's projects. Additionally, I provide some details as to why I like each language and why they stand out from others. <br/><br/>Thanks for visiting!</p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="footer" data-role="footer">
+        <h3>© 2024 - Cory Sands - All Rights Reserved.</h3>
+      </div>
+    </div>
+  </body> 
+
+  <!--Header-->
+  <div id="header" data-role="header" data-add-back-btn="true" data-theme="a">
+    <h1>Programming Language Collection</h1>  
+    <img class="ui-btn-right" style="height: 40px;" src="icons/logo.png" onclick="gotoHome()"></img>
+  </div>
+  
+  <!--Footer-->
+  <div id="footer" data-role="footer" data-theme="a">
+    <h3>© 2024 - Cory Sands - All Rights Reserved.</h3>
+  </div>
+
+  <!--Collection Page-->
+  <div id="collection" data-role="page" data-theme="c">
+    <div class="content" data-role="content">   
+      <div class="ui-body ui-body-c ui-corner-all" style="padding: 50px;">
+        <!--Collection Listings-->
+        <form>  
+          <ul id="list-icons" data-role="listview" data-filter="true" class="ui-corner-all">
+            <li><input id="fav-CSharp" type="checkbox" name="checkbox-CSharp" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/C Sharp.png"/><h2>C#</h2></a></li> 
+            <li><input id="fav-C++" type="checkbox" name="checkbox-C++" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/C++.png"/><h2>C++</h2></a></li> 
+            <li><input id="fav-CSS" type="checkbox" name="checkbox-CSS" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/Cascading Style Sheets.png"/><h2>CSS</h2></a></li> 
+            <li><input id="fav-HTML" type="checkbox" name="checkbox-HTML" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/Hypertext Markup Language.png"/><h2>HTML</h2></a></li> 
+            <li><input id="fav-JS" type="checkbox" name="checkbox-JS" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/JavaScript.png"/><h2>JavaScript</h2></a></li> 
+            <li><input id="fav-Python" type="checkbox" name="checkbox-Python" data-checked="true" onclick="update()"/><a href="#product"><img src="icons/Python.png"/><h2>Python</h2></a></li> 
+            <script src="js/manage-favorites.js"></script>
+          </ul>
+        </form>
+      </div>
+    </div> 
+  </div>
+
+
+  <!--Contact Page-->
+  <div id="contact" data-role="page" data-theme="b">
+    <div class="content" data-role="content">   
+      <div class="ui-body ui-body-b ui-corner-all">
+        <h1>Contact Form</h1>
+        <hr/>
+        <!--Contact Form-->
+        <form method="post">
+          <div style="padding:50px;">  
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" name="fname"/>
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" name="lname"/>
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email"/>
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="text" name="phone"/>
+            <label for="message">Message</label>
+            <input id="message" type="text" name="message"/>
+          </div> 
+          <input id="reset-button" type="reset" value="Reset" style="background:red;"/>
+          <input id="submit-button" type="submit" value="Submit"/>
+          <script src="js/manage-form.js"></script>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Product Page-->
+  <div id="product" data-role="page" data-theme="c">
+    <div class="content" data-role="content">   
+      <div class="ui-body ui-body-c ui-corner-all" style="padding: 50px; display: flex; justify-content: space-evenly;">
+        <!--Product Content-->
+        <div>  
+          <img id = "icon" style="width: 10%;"/>
+          <hr/>
+          <br/>
+          <p id="description"></p>
+        </div>
+        <script src="js/product-data.js"></script>
+      </div>
+    </div> 
+  </div>
+
+</html>
+

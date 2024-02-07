@@ -1,0 +1,44 @@
+@font-face {
+  font-family: literal;
+  src: url(../fonts/literal.otf);
+}
+
+* {
+  font-family: literal;
+}
+
+#main-icons {
+  margin: 10px; 
+  text-align: center;
+}
+
+#main-icons img{
+  width: 8%;
+}
+
+.content {
+  margin: 30px;
+}
+
+form label {
+  padding-top: 30px;
+}
+
+#list-icons img {
+  padding: 10px;
+  width: 50px;
+  float: left;
+}
+
+#list-icons input {
+  margin-top: 30px;
+}
+
+#list-icons a {
+  margin-left: 50px;
+}
+
+.center-children {
+  display: flex;
+  justify-content: center;
+}
